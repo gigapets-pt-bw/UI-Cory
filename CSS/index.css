@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'Londrina Shadow';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Londrina Shadow Regular'), local('LondrinaShadow-Regular'), url(https://fonts.gstatic.com/s/londrinashadow/v8/oPWX_kB4kOQoWNJmjxLV5JuoCUlnQVyW.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Capriola';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Capriola Regular'), local('Capriola-Regular'), url(https://fonts.gstatic.com/s/capriola/v6/wXKoE3YSppcvo1PDlk_7JeQ.ttf) format('truetype');
+}
+html {
+  font-size: 62.5%;
+  background-color: #00A6FB;
+}
+body {
+  width: 100%;
+}
+h1,
+h2,
+h3 {
+  font-family: 'Londrina Shadow', cursive;
+}
+a,
+p,
+li {
+  font-family: 'Capriola', sans-serif;
+}
+h1 {
+  font-size: 4.8rem;
+}
+h2 {
+  font-size: 3.6rem;
+}
+h3 {
+  font-size: 2.4rem;
+}
+a {
+  font-size: 1.8rem;
+}
+p {
+  font-size: 1.6rem;
+}
+li {
+  font-size: 1.6rem;
+}
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+@media (max-width: 500px) {
+  .container {
+    width: 90%;
+  }
+}
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #31393C;
+  background-color: rgba(255, 202, 58, 0.8);
+  position: fixed;
+  top: 0;
+}
+header h1 {
+  margin-left: 30px;
+}
+header nav a {
+  text-decoration: none;
+  color: black;
+  margin-right: 20px;
+}
