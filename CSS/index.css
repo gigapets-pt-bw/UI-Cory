@@ -368,3 +368,13 @@ footer .copyright {
   margin: 10px 0;
   text-align: center;
 }
+.intro-section {
+  margin-top: 160px;
+}
+.bios-section div {
+  display: flex;
+}
+.bios-section img {
+  width: 250px;
+  height: 250px;
+}
