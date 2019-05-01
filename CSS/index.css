@@ -424,8 +424,13 @@ footer .copyright {
     margin-bottom: 10px;
   }
 }
-.bios-section .info .reverse {
+.bios-section .reverse {
   flex-direction: row-reverse;
+}
+@media (max-width: 500px) {
+  .bios-section .reverse {
+    flex-direction: column;
+  }
 }
 .bios-section img {
   width: 250px;

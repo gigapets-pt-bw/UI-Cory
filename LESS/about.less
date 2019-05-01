@@ -62,8 +62,12 @@
         }
     }
 
-    .info .reverse {
+    .reverse {
         flex-direction: row-reverse;
+
+        @media @mobile {
+            flex-direction: column;
+        }
     }
 
     img {
