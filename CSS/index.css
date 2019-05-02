@@ -1,3 +1,131 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 @font-face {
   font-family: 'Londrina Shadow';
   font-style: normal;
@@ -14,12 +142,10 @@ html {
   font-size: 62.5%;
   background-color: #00A6FB;
 }
-body {
-  width: 100%;
-}
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: 'Londrina Shadow', cursive;
 }
 a,
@@ -35,6 +161,9 @@ h2 {
 }
 h3 {
   font-size: 2.4rem;
+}
+h4 {
+  font-size: 2rem;
 }
 a {
   font-size: 1.8rem;
@@ -56,14 +185,17 @@ li {
   }
 }
 header {
+  z-index: 3;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #31393C;
-  background-color: rgba(255, 202, 58, 0.8);
+  background-color: #FFCA3A;
   position: fixed;
   top: 0;
+  padding-top: 20px;
+  padding-bottom: 30px;
 }
 header h1 {
   margin-left: 30px;
@@ -72,4 +204,235 @@ header nav a {
   text-decoration: none;
   color: black;
   margin-right: 20px;
+}
+header nav a:hover {
+  color: #EA526F;
+  text-decoration: underline;
+  transform: scale(1.2);
+  transition: 0.2s;
+}
+@media (max-width: 500px) {
+  header nav {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: space-around;
+  }
+  header nav a {
+    padding-bottom: 10px;
+  }
+  header nav a.last-children {
+    padding-bottom: 0px;
+  }
+}
+.CTA {
+  margin-top: 140px;
+}
+.CTA img {
+  border-radius: 50%;
+}
+.CTA div a {
+  text-decoration: none;
+  border: 1px solid #31393C;
+  border-radius: 10px;
+  padding: 10px 20px;
+  background-color: white;
+  color: #8AC926;
+}
+.CTA div a:hover {
+  color: white;
+  background-color: #EA526F;
+  transform: scale(1.2);
+  transition: 0.2s;
+}
+@media (max-width: 500px) {
+  .CTA {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .CTA img {
+    width: 225px;
+  }
+  .CTA div {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .CTA div h2 {
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 1000px) {
+  .CTA {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+  }
+  .CTA div {
+    text-align: center;
+  }
+  .CTA div h2 {
+    font-size: 4.2rem;
+    margin-bottom: 80px;
+  }
+}
+.content {
+  width: 100%;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.tabs {
+  width: 100%;
+  text-align: center;
+}
+.tabs .tab-items {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  background-color: #8AC926;
+  border: 1px solid #31393C;
+  border-top: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.tabs .tab-item {
+  display: none;
+  width: 80%;
+}
+@media (max-width: 500px) {
+  .tabs .tab-item h3 {
+    margin: 30px 0;
+  }
+}
+@media (min-width: 1000px) {
+  .tabs .tab-item h3 {
+    margin: 40px 0;
+  }
+}
+.tabs .selected-item {
+  display: block;
+}
+.tabs .tab-links {
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 500px) {
+  .tabs .tab-links {
+    width: 100%;
+  }
+}
+.tabs .tab {
+  width: 25%;
+  padding: 20px 25px;
+  border: 1px solid #31393C;
+  border-collapse: collapse;
+  color: black;
+  background-color: #FFCA3A;
+  cursor: pointer;
+}
+.tabs .tab:hover {
+  background-color: #EA526F;
+  color: white;
+  transition: 0.2s;
+}
+.tabs .tab:first-child {
+  border-top-left-radius: 10px;
+}
+.tabs .tab:last-child {
+  border-top-right-radius: 10px;
+}
+@media (max-width: 500px) {
+  .tabs .tab {
+    padding: 10px 15px;
+  }
+  .tabs .tab p {
+    font-size: 1.4rem;
+  }
+}
+.tabs .selected-tab {
+  z-index: 2;
+  border-bottom: none;
+  background-color: #8AC926;
+  color: black;
+}
+.tabs .selected-tab:hover {
+  background-color: #EA526F;
+  color: white;
+  transition: 0.2s;
+}
+footer {
+  padding-top: 20px;
+  border-top: 1px solid #31393C;
+}
+footer h3 {
+  margin-bottom: 10px;
+}
+footer .copyright {
+  margin: 10px 0;
+  text-align: center;
+}
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+@media (max-width: 500px) {
+  .container {
+    width: 90%;
+  }
+}
+.intro-section {
+  margin-top: 160px;
+  text-align: center;
+  border-bottom: 2px dashed #31393C;
+}
+.intro-section h2 {
+  margin-bottom: 20px;
+}
+.bios-section .bios {
+  margin-bottom: 50px;
+}
+.bios-section .bios:first-child {
+  margin-top: 30px;
+}
+.bios-section .name {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #31393C;
+  padding-bottom: 10px;
+}
+@media (max-width: 500px) {
+}
+.bios-section .info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.bios-section .info p {
+  width: 60%;
+}
+@media (max-width: 500px) {
+  .bios-section .info {
+    flex-direction: column;
+    align-items: center;
+  }
+  .bios-section .info img {
+    margin-bottom: 10px;
+  }
+}
+.bios-section .reverse {
+  flex-direction: row-reverse;
+}
+@media (max-width: 500px) {
+  .bios-section .reverse {
+    flex-direction: column;
+  }
+}
+.bios-section img {
+  width: 250px;
+  height: 250px;
 }
