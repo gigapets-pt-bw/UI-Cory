@@ -1,16 +1,11 @@
-class InfoSection {
-    constructor(element) {
-        this.element = element;
-        this.infoSection = document.querySelector('.info');
-        this.image = document.querySelector('.info img');
+const info = document.querySelectorAll('.info');
 
-        this.image.addEventListener('dblclick', () => this.toggleReverse());
-    }
+const images = document.querySelectorAll('.info img');
 
-    toggleReverse() {
-        // this.infoSection.classList.toggle('reverse');
-        console.log("img clicked")
-    }
+images.forEach(element => {
+    element.addEventListener('dblclick', () => toggle());
+})
+
+function toggle() {
+    info.forEach(element => element.classList.toggle('reverse'));
 }
-
-const infoSections = document.querySelectorAll('.info').forEach(element => new InfoSection(element));
