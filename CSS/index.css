@@ -356,11 +356,6 @@ header nav a:hover {
   background-color: #8AC926;
   color: black;
 }
-.tabs .selected-tab:hover {
-  background-color: #EA526F;
-  color: white;
-  transition: 0.2s;
-}
 footer {
   padding-top: 20px;
   border-top: 1px solid #31393C;
